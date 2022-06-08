@@ -70,7 +70,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/app.sketchtogether.com\/s\/sketch\/IOs_w.1.1\/"
+                 "value":"https:\/\/teams.microsoft.com\/l\/meetup-join\/19%3AbHJY0NL7-6Qhe40Q4oPoKGTPjIwT9q3mpqug1i06R4o1%40thread.tacv2\/1654702907340?context=%7B%22Tid%22%3A%224852ac93-ebeb-4c65-99dc-e1436d201e8c%22%2C%22Oid%22%3A%22b193bbe3-7762-4619-a265-aea15e6ab266%22%7D"
                 }],
          "type":"tilelayer",
          "visible":true,
