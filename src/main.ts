@@ -16,8 +16,19 @@ WA.onInit().then(() => {
         const time = today.getHours() + ":" + today.getMinutes();
         currentPopup = WA.ui.openPopup("clockPopup","It's " + time,[]);
     })
+    WA.room.onLeaveLayer('clockZone').subscribe(closePopUp);
 
-    WA.room.onLeaveLayer('clockZone').subscribe(closePopUp)
+    WA.room.onEnterLayer('codeZone').subscribe(() =>{
+        currentPopup = WA.ui.openPopup("codePopup","Esta es la sala de grabación, solo pueden entrar las personas autorizadas. Por favor, introduzca su código de acceso.",[]);
+    })
+    WA.room.onLeaveLayer('codeZone').subscribe(closePopUp);
+
+    WA.room.onEnterLayer('informacaoBalcaoZone').subscribe(() =>{
+        currentPopup = WA.ui.openPopup("informacaobalcaoPopup","¡Hola! ¡Bienvenido a Opia Games Hub! ¡Elige un juego y diviértete!",[]);
+    })
+    WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
+
+    
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
