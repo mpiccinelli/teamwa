@@ -61,7 +61,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"assets\/estudio.mp3"
+                 "value":"https:\/\/mpiccinelli.github.io\/teamwa\/assets\/estudio.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1633,7 +1633,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"assets\/casino.mp3"
+                 "value":"https:\/\/mpiccinelli.github.io\/teamwa\/assets\/casino.mp3"
                 }],
          "type":"tilelayer",
          "visible":false,
