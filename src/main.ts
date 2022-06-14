@@ -28,7 +28,22 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
 
-    
+
+    const website = WA.room.website.create({
+        name: "spotfy",       // A unique name for this iframe
+        url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP?utm_source=generator",       // The URL the iframe points to.
+        position: {
+            x: 15,      // In "game" pixels, relative to the map or player coordinates, depending on origin
+            y: 10,      // In "game" pixels, relative to the map or player coordinates, depending on origin
+            width: 400,  // In "game" pixels
+            height: 80, // In "game" pixels
+        },
+        visible: true,  // Whether to display the iframe or not
+        allowApi: true, // Whether the scripting API should be available to the iframe
+        // allow: string,    The list of feature policies allowed
+        origin: "map", // The origin used to place the x and y coordinates of the iframe's top-left corner, defaults to "map"
+        scale: 2, // A ratio used to resize the iframe
+    });
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
