@@ -40,7 +40,7 @@ WA.onInit().then(() => {
         },
         visible: true,  // Whether to display the iframe or not
         allowApi: true, // Whether the scripting API should be available to the iframe
-        // allow: string,    The list of feature policies allowed
+        allow: autoplay,    The list of feature policies allowed
         origin: "map", // The origin used to place the x and y coordinates of the iframe's top-left corner, defaults to "map"
         scale: 2, // A ratio used to resize the iframe
     });
