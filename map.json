@@ -61,7 +61,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"src\/estudio.mp3"
+                 "value":"MusicaEstudio.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -128,7 +128,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"src\/casino.mp3"
+                 "value":"MusicaCasino.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
