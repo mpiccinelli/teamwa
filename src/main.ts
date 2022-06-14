@@ -28,22 +28,57 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
 
+    //Ingresso no casino
+    var mySoundCasino = WA.sound.loadSound("assets/music/MusicaCasino.mp3");
+    var configSoundCasino = {
+        volume : 0.01,
+        loop : true,
+        rate : 1,
+        detune : 1,
+        delay : 0,
+        seek : 0,
+        mute : false
+    }
+    WA.room.onEnterLayer('musicCasino').subscribe(() => {
+        mySoundCasino.play(configSoundCasino);
+    })
+    WA.room.onLeaveLayer('musicCasino').subscribe(() => {
+        mySoundCasino.stop();
+    })
 
-    const website = WA.room.website.create({
-        name: "spotfy",       // A unique name for this iframe
-        url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP?utm_source=generator",       // The URL the iframe points to.
+     //Ingresso no Estudio
+     var mySoundEstudio = WA.sound.loadSound("assets/music/MusicaEstudio.mp3");
+     var configSoundEstudio = {
+         volume : 0.05,
+         loop : true,
+         rate : 1,
+         detune : 1,
+         delay : 0,
+         seek : 0,
+         mute : false
+     }
+     WA.room.onEnterLayer('musicEstudio').subscribe(() => {
+         mySoundEstudio.play(configSoundEstudio);
+     })
+     WA.room.onLeaveLayer('musicEstudio').subscribe(() => {
+         mySoundEstudio.stop();
+     })
+
+   WA.ui.website.open({
+        url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP",
         position: {
-            x: 15,      // In "game" pixels, relative to the map or player coordinates, depending on origin
-            y: 10,      // In "game" pixels, relative to the map or player coordinates, depending on origin
-            width: 400,  // In "game" pixels
-            height: 80, // In "game" pixels
+            vertical: "bottom",
+            horizontal: "middle",
         },
-        visible: true,  // Whether to display the iframe or not
-        allowApi: true, // Whether the scripting API should be available to the iframe
-        allow: autoplay,    The list of feature policies allowed
-        origin: "map", // The origin used to place the x and y coordinates of the iframe's top-left corner, defaults to "map"
-        scale: 2, // A ratio used to resize the iframe
+        size: {
+            height: "80px",
+            width: "30vw",
+        },
     });
+
+    
+
+    
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
