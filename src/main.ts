@@ -11,24 +11,30 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+    //Open clock Popup
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
         currentPopup = WA.ui.openPopup("clockPopup","It's " + time,[]);
     })
+    //Close Clock Popup
     WA.room.onLeaveLayer('clockZone').subscribe(closePopUp);
 
+    //Open Code door Popup
     WA.room.onEnterLayer('codeZone').subscribe(() =>{
         currentPopup = WA.ui.openPopup("codePopup","Esta es la sala de grabación, solo pueden entrar las personas autorizadas. Por favor, introduzca su código de acceso.",[]);
     })
+    //Close Code door Popup
     WA.room.onLeaveLayer('codeZone').subscribe(closePopUp);
 
+    //Open information Popup
     WA.room.onEnterLayer('informacaoBalcaoZone').subscribe(() =>{
         currentPopup = WA.ui.openPopup("informacaobalcaoPopup","¡Hola! ¡Bienvenido a Opia Games Hub! ¡Elige un juego y diviértete!",[]);
     })
+    //Close information Popup
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
 
-    //Ingresso no casino
+    //Set config music casino
     var mySoundCasino = WA.sound.loadSound("assets/music/MusicaCasino.mp3");
     var configSoundCasino = {
         volume : 0.01,
@@ -39,14 +45,16 @@ WA.onInit().then(() => {
         seek : 0,
         mute : false
     }
+    //Play music on enter layer casino
     WA.room.onEnterLayer('musicCasino').subscribe(() => {
         mySoundCasino.play(configSoundCasino);
     })
+    //Stop music on enter layer casino
     WA.room.onLeaveLayer('musicCasino').subscribe(() => {
         mySoundCasino.stop();
     })
 
-     //Ingresso no Estudio
+     //Set config music studio
      var mySoundEstudio = WA.sound.loadSound("assets/music/MusicaEstudio.mp3");
      var configSoundEstudio = {
          volume : 0.05,
@@ -57,14 +65,17 @@ WA.onInit().then(() => {
          seek : 0,
          mute : false
      }
+     //Play music on enter layer casino
      WA.room.onEnterLayer('musicEstudio').subscribe(() => {
          mySoundEstudio.play(configSoundEstudio);
      })
+     //Stop music on enter layer casino
      WA.room.onLeaveLayer('musicEstudio').subscribe(() => {
          mySoundEstudio.stop();
      })
-
-   WA.ui.website.open({
+    
+    // Embed sound iframe
+    WA.ui.website.open({
         url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP",
         position: {
             vertical: "bottom",
@@ -76,10 +87,6 @@ WA.onInit().then(() => {
         },
     });
 
-    
-
-    
-
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
@@ -87,6 +94,7 @@ WA.onInit().then(() => {
 
 }).catch(e => console.error(e));
 
+//Function close opened Popup 
 function closePopUp(){
     if (currentPopup !== undefined) {
         currentPopup.close();
