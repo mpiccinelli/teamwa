@@ -14,8 +14,8 @@ WA.onInit().then(() => {
     //Open clock Popup
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
-        const time = today.getHours() + ":" + today.getMinutes();
-        currentPopup = WA.ui.openPopup("clockPopup","It's " + time,[]);
+        const time = today.getHours() + "h" + today.getMinutes();
+        currentPopup = WA.ui.openPopup("clockPopup","¡Hola! Ahora son: " + time,[]);
     })
     //Close Clock Popup
     WA.room.onLeaveLayer('clockZone').subscribe(closePopUp);
@@ -37,7 +37,7 @@ WA.onInit().then(() => {
     //Set config music casino
     var mySoundCasino = WA.sound.loadSound("assets/music/MusicaCasino.mp3");
     var configSoundCasino = {
-        volume : 0.01,
+        volume : 0.05,
         loop : true,
         rate : 1,
         detune : 1,
@@ -57,7 +57,7 @@ WA.onInit().then(() => {
      //Set config music studio
      var mySoundEstudio = WA.sound.loadSound("assets/music/MusicaEstudio.mp3");
      var configSoundEstudio = {
-         volume : 0.05,
+         volume : 0.5,
          loop : true,
          rate : 1,
          detune : 1,
@@ -78,8 +78,8 @@ WA.onInit().then(() => {
     WA.ui.website.open({
         url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP",
         position: {
-            vertical: "bottom",
-            horizontal: "middle",
+            vertical: "top",
+            horizontal: "right",
         },
         size: {
             height: "80px",
