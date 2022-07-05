@@ -523,9 +523,19 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"allowApi",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
                  "name":"openWebsite",
                  "type":"string",
                  "value":"https:\/\/whiteboard.fi\/a758g"
+                }, 
+                {
+                 "name":"policy",
+                 "type":"string",
+                 "value":"allow"
                 }],
          "type":"tilelayer",
          "visible":true,
