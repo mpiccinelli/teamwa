@@ -49,6 +49,16 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"audioLoop",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"audioVolume",
+                 "type":"float",
+                 "value":100
+                }, 
+                {
                  "name":"playAudio",
                  "type":"string",
                  "value":".\/assets\/music\/MusicaEstudio.mp3"
