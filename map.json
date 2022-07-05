@@ -521,6 +521,12 @@
          "id":51,
          "name":"whiteboard",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"openWebsite",
+                 "type":"string",
+                 "value":"https:\/\/app.sketchtogether.com\/s\/sketch\/gtoLw.3.1\/"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":61,
