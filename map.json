@@ -530,12 +530,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/whiteboard.fi\/a758g"
-                }, 
-                {
-                 "name":"policy",
-                 "type":"string",
-                 "value":"allow"
+                 "value":"https:\/\/miro.com\/app\/board\/uXjVOoWHOso=\/?share_link_id=289831034978"
                 }],
          "type":"tilelayer",
          "visible":true,
