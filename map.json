@@ -523,11 +523,6 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"allowApi",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
                  "name":"openWebsite",
                  "type":"string",
                  "value":"https:\/\/miro.com\/app\/board\/uXjVOoWHOso=\/?share_link_id=289831034978"
