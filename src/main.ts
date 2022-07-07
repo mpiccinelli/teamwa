@@ -33,27 +33,6 @@ WA.onInit().then(() => {
     })
     //Close information Popup
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
-
-    
-     //Set config music studio
-     var mySoundEstudio = WA.sound.loadSound("assets/music/MusicaEstudio.mp3");
-     var configSoundEstudio = {
-         volume : 0.5,
-         loop : true,
-         rate : 1,
-         detune : 1,
-         delay : 0,
-         seek : 0,
-         mute : false
-     }
-     //Play music on enter layer casino
-     WA.room.onEnterLayer('musicEstudio').subscribe(() => {
-         mySoundEstudio.play(configSoundEstudio);
-     })
-     //Stop music on enter layer casino
-     WA.room.onLeaveLayer('musicEstudio').subscribe(() => {
-         mySoundEstudio.stop();
-     })
     
     // Embed sound iframe
     WA.ui.website.open({
