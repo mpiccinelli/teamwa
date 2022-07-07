@@ -34,26 +34,7 @@ WA.onInit().then(() => {
     //Close information Popup
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
 
-    //Set config music casino
-    var mySoundCasino = WA.sound.loadSound("assets/music/MusicaCasino.mp3");
-    var configSoundCasino = {
-        volume : 0.05,
-        loop : true,
-        rate : 1,
-        detune : 1,
-        delay : 0,
-        seek : 0,
-        mute : false
-    }
-    //Play music on enter layer casino
-    WA.room.onEnterLayer('musicCasino').subscribe(() => {
-        mySoundCasino.play(configSoundCasino);
-    })
-    //Stop music on enter layer casino
-    WA.room.onLeaveLayer('musicCasino').subscribe(() => {
-        mySoundCasino.stop();
-    })
-
+    
      //Set config music studio
      var mySoundEstudio = WA.sound.loadSound("assets/music/MusicaEstudio.mp3");
      var configSoundEstudio = {
