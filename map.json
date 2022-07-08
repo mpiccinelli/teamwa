@@ -654,7 +654,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"..\/assets\/music\/MusicaCasino.mp3"
+                 "value":"\/music\/MusicaCasino.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
