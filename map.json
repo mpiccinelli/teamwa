@@ -654,7 +654,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"music\/MusicaCasino.mp3"
+                 "value":"https:\/\/github.com\/mpiccinelli\/teamwa\/blob\/24c1aeabc5e7161c98e1a6b9a83350aecb90a7bd\/music\/MusicaCasino.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
