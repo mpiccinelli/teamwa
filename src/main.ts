@@ -34,7 +34,7 @@ WA.onInit().then(() => {
     //Close information Popup
     WA.room.onLeaveLayer('informacaoBalcaoZone').subscribe(closePopUp);
     
-    // Embed sound iframe
+    /* Embed sound iframe
     WA.ui.website.open({
         url: "https://open.spotify.com/embed/playlist/7puNue3FaF5kpR8k5ElLDP",
         position: {
@@ -45,7 +45,7 @@ WA.onInit().then(() => {
             height: "80px",
             width: "30vw",
         },
-    });
+    });*/
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
