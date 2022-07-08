@@ -167,6 +167,11 @@
                  "value":true
                 }, 
                 {
+                 "name":"audioVolume",
+                 "type":"float",
+                 "value":0
+                }, 
+                {
                  "name":"playAudio",
                  "type":"string",
                  "value":"assets\/audio\/campfire.ogg"
